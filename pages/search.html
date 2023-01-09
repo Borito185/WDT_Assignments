@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Item Details</title>
+  </head>
+
+  <body>
+    <main>
+        <article>
+            <h1>Search Items</h1> 
+            <form action="/search" method="post">
+                <ul>
+                    <li>
+                        <label for="supplier"> Supplier: </label>
+                        <input type="text" id="supplier" name="suppl" />
+                    </li>
+                    <li>
+                        <label for="minprice"> Minimum: </label>
+                        <input type="number" id="minprice" name="minp" />
+                    </li>
+                    <li>
+                        <label for="maxprice"> Minimum: </label>
+                        <input type="number" id="maxprice" name="maxp" />
+                    </li>
+                    <li>
+                        <label for="rating"> Minimum: </label>
+                        <input type="number" id="rating" name="rating" />
+                    </li>
+                </ul>
+                <li>
+                    <button type="submit">Search</button>
+                </li>
+            </form>
+            
+            <h1> Search Results </h1>
+            
+            <a href = "item.html">
+                <section>
+                    <h2> A Very Nice Book</h2>
+                    <p> Description:     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Price: 10 euros per unit </p>
+                </section>
+            </a>
+
+            <a href = "item.html">
+                <section>
+                    <h2> A Second Book</h2>
+                    <p> Description:     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Price: 20 euros per unit </p>
+                </section>
+            </a>
+            
+        </article>
+    </main>
+  </body>
+</html>
