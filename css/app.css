@@ -1,15 +1,33 @@
 .dark-green-bg {
-  color: #425F57;
+  background-color: #425F57;
 }
 .med-green-bg {
-  color: #749F82;
+  background-color: #749F82;
 }
 .light-green-bg {
-  color: #A8E890;
+  background-color: #A8E890;
 }
 .ultra-light-green-bg {
-  color: #CFFF8D;
+  background-color: #CFFF8D;
 }
 .row {
-  display:flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.border-thin{
+  border: black solid thin;
+}
+.page-footer {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+.page-header {
+  margin: 0;
+  padding: 10px 40px;
+  width: 100%;
+}
+:root{
+  box-sizing: border-box;
 }
