@@ -21,13 +21,60 @@
 .page-footer {
   margin: 0;
   padding: 10px;
-  width: 100%;
 }
 .page-header {
   margin: 0;
   padding: 10px 40px;
-  width: 100%;
 }
 :root{
   box-sizing: border-box;
+}
+.margin-0 {
+  margin: 0;
+}
+.margin-10 {
+  margin: 10px;
+}
+.page-header > div > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.page-header > div > input {
+  border-radius: 4px;
+}
+.center {
+  margin: auto;
+  width: fit-content;
+}
+.huge-button {
+  width: 100%;
+  background-color:#425F57;
+  color: white;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.full-size {
+  height: 100%;
+  width: 100%;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-grow-0 {
+  flex-grow: 0;
+}
+.oi-cart:before {
+  content: '\e031'
+}
+.width-60 {
+  width: 60%;
+}
+.medium-huge-button {
+  width: 80%;
+  background-color:#425F57;
+  color: white;
 }

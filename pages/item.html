@@ -1,20 +1,42 @@
 <!doctype html>
-<html>
+<html class="full-size">
   <head>
     <meta charset="utf-8" />
     <title>Item Details</title>
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <main>
-        <article>
-            <h1> A Very Nice Book</h2>
-            <p> Description:     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p> Quantity: 23 (on stock)</p>
-            <p> Price: 10 euros per unit </p>
-            <p> Category: Books </p>
-            <button type="button"> Add to Cart </button>
-        </article>
+  <body class="margin-0 column full-size">
+    <header class="light-green-bg border-thin page-header" >
+      <div class="row">
+        <a href="/"><h1>Our Shop</h1></a>
+        <a href = "/page/search.html"> Search </a>
+        <a href = "/page/additem.html"> Add item </a>
+
+        <input type="text" placeholder="Search for an item!" />
+        <a href = "/page/login.html"> Sign in </a>
+        <a href = "/page/register.html"> Register </a>
+
+        <a href = "/page/cart.html"><i class="oi oi-cart"></i></a> 
+      </div>
+    </header>
+
+    <main class="margin-10 flex-grow-1">
+      <article class="full-size">
+        <h1> A Very Nice Book</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p> Quantity: 23 (on stock)</p>
+        <p> Price: 10 euros per unit </p>
+        <p> Category: Books </p>
+        <a href="/pages/cart.html"><button class="huge-button" type="button"> Add to Cart </button></a>
+      </article>
     </main>
+
+    <footer class="light-green-bg border-thin page-footer" >
+      <p>&copy; Our Shop Company 2023</p>
+      <p>Email us! At: ourshop@gmail.com</p>
+    </footer>    
+
   </body>
 </html>

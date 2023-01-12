@@ -1,14 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="full-size">
   <head>
+    <meta charset="utf-8" />
     <title>Shopping Cart</title>
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
   </head>
-  <body>
-    <main>
+
+  <body class="margin-0 column full-size">
+    <header class="light-green-bg border-thin page-header" >
+      <div class="row">
+        <a href="/"><h1>Our Shop</h1></a>
+        <a href = "/page/search.html"> Search </a>
+        <a href = "/page/additem.html"> Add item </a>
+
+        <input type="text" placeholder="Search for an item!" />
+        <a href = "/page/login.html"> Sign in </a>
+        <a href = "/page/register.html"> Register </a>
+
+        <a href = "/page/cart.html"><i class="oi oi-cart"></i></a> 
+      </div>
+    </header>
+
+    <main class="margin-10 flex-grow-1 column">
       
       <div>
-        <article>
-          <span>
+        <article class="row">
+          <span class="width-60">
             <h1><strong>Responsive Web Design</strong></h1>
             <p>Harness the latest capabilities of HTML5 and CSS to create a single UI that works flawlessly on mobile phones, tablets, and desktops.</p>
           </span>
@@ -18,8 +36,8 @@
             <p>Price per item: $<strong>49.99</strong></p>
           </span>
         </article>
-        <article>
-          <span>
+        <article class="row">
+          <span class="width-60">
             <h1><strong>Code Eat Sleep Repeat mug</strong></h1>
             <p>Personalised Eat Sleep Code Repeat, gift for Computer Programmer.</p>
           </span>
@@ -32,10 +50,16 @@
       </div>
       
       <br>
-      <a href="search.html">
-        <button>Continue to Purchase</button>
+      <a href="purchase.html">
+        <button class="huge-button">Continue to Purchase</button>
       </a>
       
     </main>
+
+    <footer class="light-green-bg border-thin page-footer" >
+      <p>&copy; Our Shop Company 2023</p>
+      <p>Email us! At: ourshop@gmail.com</p>
+    </footer>    
+
   </body>
 </html>

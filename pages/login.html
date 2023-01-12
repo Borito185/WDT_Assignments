@@ -1,12 +1,29 @@
 <!doctype html>
-<html>
+<html class="full-size">
   <head>
     <meta charset="utf-8" />
     <title>Sign in</title>
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <main>
+  <body class="margin-0 column full-size">
+    <header class="light-green-bg border-thin page-header" >
+      <div class="row">
+        <a href="/"><h1>Our Shop</h1></a>
+        <a href = "/page/search.html"> Search </a>
+        <a href = "/page/additem.html"> Add item </a>
+
+        <input type="text" placeholder="Search for an item!" />
+        <a href = "/page/login.html"> Sign in </a>
+        <a href = "/page/register.html"> Register </a>
+
+        <a href = "/page/cart.html"><i class="oi oi-cart"></i></a> 
+      </div>
+    </header>
+
+    <main class="margin-10 flex-grow-1">
+      
         <article>
             <h1> Sign in </h1> 
             
@@ -28,6 +45,13 @@
 
             <p>Do not have an account yet? <a href="register.html"> Create an account </a> </p>
         </article>
+
     </main>
+
+    <footer class="light-green-bg border-thin page-footer" >
+      <p>&copy; Our Shop Company 2023</p>
+      <p>Email us! At: ourshop@gmail.com</p>
+    </footer>    
+
   </body>
 </html>
