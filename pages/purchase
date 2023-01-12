@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+  
+  
+    <form action="your-server-endpoint" method="post">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" name="card-number">
+
+      <label for="expiration-date">Expiration Date</label>
+      <input type="text" id="expiration-date" name="expiration-date">
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv">
+
+      <input type="submit" value="Pay">
+    </form>
+  
+  
+  </body>
+</html>
