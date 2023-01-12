@@ -1,0 +1,15 @@
+.dark-green-bg {
+  color: #425F57;
+}
+.med-green-bg {
+  color: #749F82;
+}
+.light-green-bg {
+  color: #A8E890;
+}
+.ultra-light-green-bg {
+  color: #CFFF8D;
+}
+.row {
+  display:flex;
+}
