@@ -11,40 +11,34 @@
     <header class="light-green-bg border-thin page-header" >
       <div class="row">
         <a href="/"><h1>Our Shop</h1></a>
-        <a href = "/page/search.html"> Search </a>
-        <a href = "/page/additem.html"> Add item </a>
+        <a href = "/pages/search.html"> Search </a>
+        <a href = "/pages/additem.html"> Add item </a>
 
         <input type="text" placeholder="Search for an item!" />
-        <a href = "/page/login.html"> Sign in </a>
-        <a href = "/page/register.html"> Register </a>
+        <a href = "/pages/login.html"> Sign in </a>
+        <a href = "/pages/register.html"> Register </a>
 
-        <a href = "/page/cart.html"><i class="oi oi-cart"></i></a> 
+        <a href = "/pages/cart.html"><i class="oi oi-cart"></i></a> 
       </div>
     </header>
 
     <main class="margin-10 flex-grow-1">
       
-        <article>
-            <h1> Sign in </h1> 
-            
-            <form action="#" method="post">
-                <ul>
-                    <li>
-                        <label for="username"> Username: </label>
-                        <input type="text" id="username" name="uname" />
-                    </li>
-                    <li>
-                        <label for="password"> Password: </label>
-                        <input type="password" id="password" name="pwd" />
-                    </li>
-                </ul>
-                <li>
-                    <button type="submit">Sign in</button>
-                </li>
-            </form>
+      <form action="#" method="post" class = "center container ultra-light-green-bg">
+        <div class = "row">
+            <label for="username"> Username: </label>
+            <input type="text" id="username" name="uname" />
+        </div>
+        <div class = "row">
+            <label for="password"> Password: </label>
+            <input type="password" id="password" name="pwd" />
+        </div>
+        <div class = "row">
+          <button type="submit" class = "huge-button">Sign in</button>
+        </div>
+      </form>
 
-            <p>Do not have an account yet? <a href="register.html"> Create an account </a> </p>
-        </article>
+      <p class="center">Do not have an account yet? <a href="register.html"> Create an account </a> </p>
 
     </main>
 

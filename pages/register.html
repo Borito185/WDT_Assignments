@@ -3,49 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <title>Register</title>
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/css/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <main>
-        <article>
-            <h1> Register </h1> 
-            
-            <form action="#" method="post">
-                <ul>
-                    <li>
-                        <label for="username"> Username: </label>
-                        <input type="text" id="username" name="uname" />
-                    </li>
-                    <li>
-                        <label for="name"> Full name: </label>
-                        <input type="text" id="name" name="fname" />
-                    </li>
-                    <li>
-                        <label for="email"> Email: </label>
-                        <input type="email" id="email" name="email" />
-                    </li>
-                    <li>
-                        <label for="address"> Address: </label>
-                        <input type="text" id="address" name="addr" />
-                    </li>
-                    <li>
-                        <label for="birthday"> Date of Birth: </label>
-                        <input type="date" id="birthday" name="bdate" />
-                    </li>
-                    <li>
-                        <label for="password"> Password: </label>
-                        <input type="password" id="password" name="pwd" />
-                    </li>
-                    <li>
-                        <label for="repeat"> Repeat Password: </label>
-                        <input type="password" id="repeat" name="rpwd" />
-                    </li>
-                </ul>
-                <li>
-                    <button type="submit">Create Account</button>
-                </li>
-            </form>
-        </article>
+  <body class="margin-0 column full-size">
+    <header class="light-green-bg border-thin page-header" >
+      <div class="row">
+        <a href="/"><h1>Our Shop</h1></a>
+        <a href = "/pages/search.html"> Search </a>
+        <a href = "/pages/additem.html"> Add item </a>
+
+        <input type="text" placeholder="Search for an item!" />
+        <a href = "/pages/login.html"> Sign in </a>
+        <a href = "/pages/register.html"> Register </a>
+
+        <a href = "/pages/cart.html"><i class="oi oi-cart"></i></a> 
+      </div>
+    </header>
+
+    <main class="margin-10 flex-grow-1">
+        <form action="#" method="post" class="center container ultra-light-green-bg">
+            <div class = "row">
+                <label for="username"> Username: </label>
+                <input type="text" id="username" name="uname" />
+            </div>
+            <div class = "row">
+                <label for="name"> Full name: </label>
+                <input type="text" id="name" name="fname" />
+            </div>
+            <div class = "row">
+                <label for="email"> Email: </label>
+                <input type="email" id="email" name="email" />
+            </div>
+            <div class = "row">
+                <label for="address"> Address: </label>
+                <input type="text" id="address" name="addr" />
+            </div>
+            <div class = "row">
+                <label for="birthday"> Date of Birth: </label>
+                <input type="date" id="birthday" name="bdate" />
+            </div>
+            <div class = "row">
+                <label for="password"> Password: </label>
+                <input type="password" id="password" name="pwd" />
+            </div>
+            <div class = "row">
+                <label for="repeat"> Repeat Password: </label>
+                <input type="password" id="repeat" name="rpwd" />
+            </div>
+            <div class = "row">
+                <button type="submit" class="huge-button">Create Account</button>
+            </div>
+        </form>
     </main>
+
+    <footer class="light-green-bg border-thin page-footer" >
+        <p>&copy; Our Shop Company 2023</p>
+        <p>Email us! At: ourshop@gmail.com</p>
+      </footer> 
+
   </body>
 </html>

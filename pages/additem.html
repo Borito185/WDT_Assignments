@@ -10,38 +10,38 @@
     <header class="light-green-bg border-thin page-header" >
       <div class="row">
         <a href="/"><h1>Our Shop</h1></a>
-        <a href = "/page/search.html"> Search </a>
-        <a href = "/page/additem.html"> Add item </a>
+        <a href = "/pages/search.html"> Search </a>
+        <a href = "/pages/additem.html"> Add item </a>
 
         <input type="text" placeholder="Search for an item!" />
-        <a href = "/page/login.html"> Sign in </a>
-        <a href = "/page/register.html"> Register </a>
+        <a href = "/pages/login.html"> Sign in </a>
+        <a href = "/pages/register.html"> Register </a>
 
-        <a href = "/page/cart.html"><i class="oi oi-cart"></i></a> 
+        <a href = "/pages/cart.html"><i class="oi oi-cart"></i></a> 
       </div>
     </header>
 
     <main class="margin-10 flex-grow-1">
-      <form class="center" action="/pages/item.html">
+      <form class="center container ultra-light-green-bg" action="/pages/item.html">
         <div class="row">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name">
-        </div></br>
+        </div>
 
         <div class="row">
           <label for="description">Description:</label>
           <textarea id="description" name="description"></textarea>
-        </div></br>
+        </div>
 
         <div class="row">
           <label for="quantity">Quantity:</label>
           <input type="number" id="quantity" name="quantity" min="1">
-        </div></br>  
+        </div> 
 
         <div class="row">
           <label for="price">Price per Item:</label>
           <input type="number" id="price" name="price" min="0" step="0.01">
-        </div></br>   
+        </div>   
 
         <div class="row">
           <label for="category">Category:</label>
@@ -51,7 +51,7 @@
             <option value="books">Books</option>
             <option value="other">Other</option>
           </select>
-        </div></br>
+        </div>
 
         <input class="huge-button" type="submit" value="Add item">
       </form>
