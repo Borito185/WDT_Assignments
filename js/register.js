@@ -3,7 +3,6 @@ function registerValidation()
     const form = document.forms["register-form"];
     let uid = form["uid"];
     let pwd = form["pwd"];
-    let rpwd = form["rpwd"];
     let name = form["name"];
     let addr = form["addr"];
     let country = form["country"];
