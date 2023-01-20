@@ -62,11 +62,6 @@ function registerValidation()
         return;
     }
 
-    if (pwd !== rpwd)
-    {
-        return;
-    }
-
     if (!isValidWord(name))
     {
         return;
@@ -87,6 +82,18 @@ function registerValidation()
     for (field of form)
         allValues += field.value + "\n";
     alert(allValues);
+}
+
+function validEmail(email)
+{
+    const iat = email.indexOf("@");
+    const icom = email.lastIndexOf(".");
+
+    return  iat != -1 && icom != -1 &&
+            icom > iat && icom != iat + 1 &&
+            iat != 0 &&
+            !email.endsWith(".") &&
+            iat === email.lastIndexOf("@");
 }
 
 function validZip(zip)
