@@ -23,35 +23,55 @@
     </header>
 
     <main class="margin-10 flex-grow-1">
-        <form action="#" method="post" class="center container ultra-light-green-bg">
+        <form onsubmit="return registerValidation()" name="register-form" action="#" method="post" class="center container ultra-light-green-bg">
             <div class = "row">
-                <label for="username"> Username: </label>
-                <input type="text" id="username" name="uname" />
+                <label for="userid"> User ID* </label>
+                <input type="text" id="userid" name="uid" />
             </div>
             <div class = "row">
-                <label for="name"> Full name: </label>
-                <input type="text" id="name" name="fname" />
+                <label for="password"> Password* </label>
+                <input type="password" id="password" name="pwd" />
             </div>
             <div class = "row">
-                <label for="email"> Email: </label>
-                <input type="email" id="email" name="email" />
+                <label for="repeat"> Repeat Password* </label>
+                <input type="password" id="repeat" name="rpwd" />
+            </div>
+            <div class = "row">
+                <label for="name"> Name* </label>
+                <input type="text" id="name" name="name" />
             </div>
             <div class = "row">
                 <label for="address"> Address: </label>
                 <input type="text" id="address" name="addr" />
             </div>
             <div class = "row">
-                <label for="birthday"> Date of Birth: </label>
-                <input type="date" id="birthday" name="bdate" />
+                <label for="country"> Country* </label>
+                <select id="country" name="country" > </select>
             </div>
             <div class = "row">
-                <label for="password"> Password: </label>
-                <input type="password" id="password" name="pwd" />
+                <label for="zip"> ZIP Code </label>
+                <input type="text" id="zip" name="zip" />
             </div>
             <div class = "row">
-                <label for="repeat"> Repeat Password: </label>
-                <input type="password" id="repeat" name="rpwd" />
+                <label for="email"> Email* </label>
+                <input type="email" id="email" name="email" />
             </div>
+            <div class = "row">
+                <label for="sex"> Sex* </label>
+                <select id="sex" name="sex" > 
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class = "row">
+                <label for="lang"> Language* </label>
+                <select id="lang" name="lang" > </select>
+            </div>
+            <div class = "row">
+                <label for="bio"> Bio: </label>
+                <textarea name="bio" id="bio"></textarea>
+            </div>
+            
             <div class = "row">
                 <button type="submit" class="huge-button">Create Account</button>
             </div>
@@ -61,7 +81,8 @@
     <footer class="light-green-bg border-thin page-footer" >
         <p>&copy; Our Shop Company 2023</p>
         <p>Email us! At: ourshop@gmail.com</p>
-      </footer> 
+    </footer> 
 
+    <script type="text/javascript" src="../js/register.js"> </script>
   </body>
 </html>
