@@ -57,22 +57,22 @@ function registerValidation()
         return;
     }
 
-    if (!validPassword(pwd))
+    if (!validPassword(pwd.value))
     {
         return;
     }
 
-    if (!isValidWord(name))
+    if (!isValidWord(name.value))
     {
         return;
     }
 
-    if (!validZip(zip))
+    if (!validZip(zip.value))
     {
         return;
     }
 
-    if (!validEmail(email))
+    if (!validEmail(email.value))
     {
         return;
     }
@@ -105,7 +105,7 @@ function validZip(zip)
 
 function isValidWord(str)
 {
-    for (char of str)
+    for (let char of str)
         if (!isAlpha(char))
             return false;
 
@@ -115,12 +115,9 @@ function isValidWord(str)
 function validPassword(pwd)
 {
     let conditions = [false, false, false, false];
-    for (char of pwd)
-    {
-        if (isNumber(char))
-            conditions[0] = true;
-
-        else if (isSymbol(char))
+    for (let char of pwd)
+    {   
+        if (isSymbol(char))
             conditions[1] = true;
         
         else if (isLowerCase(char))
@@ -128,6 +125,9 @@ function validPassword(pwd)
         
         else if (isUpperCase(char))
             conditions[3] = true;
+
+        else if (isNumber(char))
+            conditions[0] = true;
     }
 
     for (cond of conditions)
