@@ -1,6 +1,9 @@
-function registerValidation()
+const form = document.forms["register-form"];
+
+form.addEventListener("submit", (event) =>
 {
-    const form = document.forms["register-form"];
+    resetErrorMsg();
+
     let uid = form["uid"];
     let pwd = form["pwd"];
     let name = form["name"];
@@ -12,72 +15,109 @@ function registerValidation()
     let lang = form["lang"];
     let bio = form["bio"];
 
+    let error = false;
+
     if (uid.value === "")
     {
-        return;
+        document.getElementById("err-uid").textContent = "User ID is a required field.";
+        error = true;
     }
 
     if (pwd.value === "")
     {
-        return;
+        document.getElementById("err-pwd").textContent = "Password is a required field.";
+        error = true;
     }
 
-    if (name.pwd === "")
+    if (name.value === "")
     {
-        return;
+        document.getElementById("err-name").textContent = "Name is a required field.";
+        error = true;
     }
 
     if (country.value === "")
     {
-        return;
+        document.getElementById("err-country").textContent = "Country is a required field.";
+        error = true;
+    }
+    
+    if (zip.value === "")
+    {
+        document.getElementById("err-zip").textContent = "ZIP code is a required field.";
+        error = true;
     }
 
     if (email.value === "")
     {
-        return;
+        document.getElementById("err-email").textContent = "Email is a required field.";
+        error = true;
     }
 
     if (sex.value === "")
     {
-        return;
+        document.getElementById("err-sex").textContent = "Sex is a required field.";
+        error = true;
     }
 
     if (lang.value === "")
     {
-        return;
+        document.getElementById("err-lang").textContent = "Language is a required field.";
+        error = true;
     }
 
     if (uid.value.length < 5 || uid.value.length > 12)
     {
-        return;
+        document.getElementById("err-uid").textContent = "User ID must be between 5 and 12 characters long.";
+        error = true;
     }
 
     if (pwd.value.length < 12)
     {
-        return;
+        document.getElementById("err-pwd").textContent = "Password must have at least twelve characters.";
+        error = true;
     }
 
     if (!validPassword(pwd.value))
     {
-        return;
+        document.getElementById("err-pwd").textContent = "Password must include upper and lowercase letters, digits and symbols.";
+        error = true;
     }
 
     if (!isValidWord(name.value))
     {
-        return;
+        document.getElementById("err-name").textContent = "Name must be alphabetical.";
+        error = true;
     }
 
     if (!validZip(zip.value))
     {
-        return;
+        document.getElementById("err-zip").textContent = "ZIP code must have four digits followed by two letters.";
+        error = true;
     }
 
     if (!validEmail(email.value))
     {
-        return;
+        document.getElementById("err-pwd").textContent = "Enter a valid email address.";
+        error = true;
     }
 
 
+    if (!error)
+        alertAllFields(form);
+    else
+        event.preventDefault();
+});
+
+function resetErrorMsg()
+{
+    const suffixes = ["uid", "pwd", "name", "country", "zip", "email", "sex", "lang"];
+
+    for (let field of suffixes)
+        document.getElementById("err-" + field).textContent = "";
+}
+
+function alertAllFields(form)
+{
     let allValues = "";
     for (field of form)
         allValues += field.value + "\n";
