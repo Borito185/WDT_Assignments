@@ -2,7 +2,7 @@ const form = document.forms["register-form"];
 
 form.addEventListener("submit", (event) =>
 {
-    event.preventDefault();
+    event.preventDefault(true);
 
     let uid = form["uid"];
     let pwd = form["pwd"];
@@ -23,6 +23,8 @@ form.addEventListener("submit", (event) =>
     document.getElementById("err-email").textContent = ValidateEmail(email.value);
     document.getElementById("err-sex").textContent = ValidateSex(sex.value);
     document.getElementById("err-lang").textContent = ValidateLanguage(lang.value);
+
+    return false;
 });
 function ValidateUserID(value){
     if(/^\s*$/.test(value)){
@@ -31,7 +33,7 @@ function ValidateUserID(value){
     if (!/.{3,12}/.test(value)){
         return "User ID should be between 3 and 12 characters.";
     }
-    if (!/^[A-Z]*/.test(value)){
+    if (!/^[A-Z]/.test(value)){
         return "User ID should start with a capital letter.";
     }
     if (!/[^a-zA-Z]$/.test(value)){
@@ -46,7 +48,7 @@ function ValidatePassword(value){
     if (!/.{12,}/.test(value)){
         return "Password should be at least 12 characters long, but 14 or more is better."
     }
-    if (!/^\S*$/.test(value)){
+    if (!/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\\$%^&*_-])/.test(value)){
         return "Password should be a combination of uppercase letters, lowercase letters, numbers, and symbols."
     }
     return "Looks good!"
@@ -70,13 +72,13 @@ function ValidateZIP(value){
     if(/^\s*$/.test(value)){
         return "ZIP Code is required."
     }
-    if (!/^.{6}*$/.test(value)){
+    if (!/^.{6}$/.test(value)){
         return "Zip Code should be 6 characters long."
     }
-    if (!/^[0-9]{4}*/.test(value)){
+    if (!/^[0-9]{4}/.test(value)){
         return "Zip Code should start with 4 numbers."
     }
-    if (!/[A-Za-z]{2}$*/.test(value)){
+    if (!/[A-Za-z]{2}$/.test(value)){
         return "Zip Code should end with 2 letters."
     }
     return "Looks good!"
