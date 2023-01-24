@@ -71,6 +71,12 @@ form.addEventListener("submit", (event) =>
         error = true;
     }
 
+    if (!validUid(uid.value))
+    {
+        document.getElementById("err-uid").textContent = "User ID must start with a capital letter, and end with a number or special character.";
+        error = true;
+    }
+
     if (pwd.value.length < 12)
     {
         document.getElementById("err-pwd").textContent = "Password must have at least twelve characters.";
@@ -203,4 +209,11 @@ function isSymbol(str)
     const symbols = "!@#$%^&*()[]{}~\\|/?.,<>-_=+`";
     
     return symbols.includes(str);
+}
+
+function validUid(str)
+{
+    const l = str.length;
+    return  isUpperCase(str.charAt(0)) && 
+            (isSymbol(str.charAt(l-1)) || isNumber(str.charAt(l-1)));
 }
