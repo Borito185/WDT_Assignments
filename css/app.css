@@ -143,3 +143,6 @@ form div.row{
 .card-form > div > div > input {
   width: 60%;
 }
+.hide {
+  display: none;
+}
