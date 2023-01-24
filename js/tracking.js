@@ -47,8 +47,7 @@ function OnSubmit(e){
 
     let node = document.createElement("div");
     node.innerHTML = "Number of mouse clicks: " + numClicks;
-
-    node.innerHTML += "</br>Total time spent: " + (Date.now() - startTime);
+    node.innerHTML += "</br>Total time spent (ms): " + (Date.now() - startTime);
     node.innerHTML += "</br>Total key presses: " + GetSumOfValues(keyPresses);
     node.innerHTML += "</br>Total number of characters typed: " + GetSumOfValues(numCharTyped);
 
