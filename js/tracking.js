@@ -47,20 +47,20 @@ function OnSubmit(e){
 
     let node = document.createElement("div");
     node.innerHTML = "Number of mouse clicks: " + numClicks;
-    console.log
-    node.innerHTML += "</br>time spent on page: " + (Date.now() - startTime);
+
+    node.innerHTML += "</br>Total time spent: " + (Date.now() - startTime);
+    node.innerHTML += "</br>Total key presses: " + GetSumOfValues(keyPresses);
+    node.innerHTML += "</br>Total number of characters typed: " + GetSumOfValues(numCharTyped);
+
     div.appendChild(node);
-    fields.forEach(element => {
-        if (element.id == "") return;
-
-        let node = document.createElement("div");
-        node.innerHTML = element.id + "</br> key presses: " + keyPresses.get(element) + "</br>characters typed: " + numCharTyped.get(element);
-        div.appendChild(node)
-    });
-    for (let f in fields){
-
-    }
 
     div.classList.remove("hide");
     return false;
+}
+function GetSumOfValues(map){
+    let sum = 0;
+    map.forEach((v) => {
+      sum += v;
+    });
+    return sum;
 }
