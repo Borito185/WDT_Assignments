@@ -23,7 +23,10 @@
     </header>
 
     <main class="margin-10 flex-grow-1">
-        <form name="register-form" action="#" method="post" class="center container ultra-light-green-bg">
+        <div id="form-tracking-data" class="hide">
+
+        </div>
+        <form onsubmit="return ShowTrackingData()" name="register-form" action="#" method="post" class="center container ultra-light-green-bg">
             <span class="error" id="err-uid"></span>
             <div class = "row">
                 <label for="userid"> User ID* </label>
