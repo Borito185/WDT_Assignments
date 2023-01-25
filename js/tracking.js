@@ -64,7 +64,7 @@ function ShowTrackingData(event)
 
     let node = document.createElement("div");
     node.innerHTML = "Number of mouse clicks: " + numClicks;
-    node.innerHTML += "</br>Total time spent (ms): " + (Date.now() - startTime);
+    node.innerHTML += "</br>Total time spent (ms): " + msToMinuteSeconds(Date.now() - startTime);
     node.innerHTML += "</br>Total key presses: " + GetSumOfValues(keyPresses);
     node.innerHTML += "</br>Total number of characters typed: " + GetSumOfValues(numCharTyped);
 
@@ -85,4 +85,11 @@ function GetSumOfValues(map){
       sum += v;
     });
     return sum;
+}
+function msToMinuteSeconds(milli){
+    let seconds = Math.floor((milli / 1000) % 60);
+    let minutes = Math.floor(milli / (1000 * 60));
+
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    return minutes + ":" + seconds;
 }
