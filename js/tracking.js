@@ -75,7 +75,7 @@ function ShowTrackingData(event)
     // Make div visible
     div.classList.remove("hide");
 
-    validateFields(event);
+    submitForm(event);
 
     return false;
 };

@@ -1,6 +1,6 @@
 const form = document.forms["register-form"];
 
-function validateFields(event)
+function submitForm(event)
 {
     resetErrorMsg();
 
