@@ -15,16 +15,38 @@ function submitForm(event)
     let lang = form["lang"];
     let bio = form["bio"];
 
-    document.getElementById("err-uid").textContent = ValidateUserID(uid.value);
-    document.getElementById("err-pwd").textContent = ValidatePassword(pwd.value);
-    document.getElementById("err-name").textContent = ValidateName(name.value);
-    document.getElementById("err-country").textContent = ValidateCountry(country.value);
-    document.getElementById("err-zip").textContent = ValidateZIP(zip.value);
-    document.getElementById("err-email").textContent = ValidateEmail(email.value);
-    document.getElementById("err-sex").textContent = ValidateSex(sex.value);
-    document.getElementById("err-lang").textContent = ValidateLanguage(lang.value);
+
+    let result = ""
+    let error = false;
+    document.getElementById("err-uid").textContent = result = ValidateUserID(uid.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-pwd").textContent = result = ValidatePassword(pwd.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-name").textContent = result = ValidateName(name.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-country").textContent = result = ValidateCountry(country.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-zip").textContent = result = ValidateZIP(zip.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-email").textContent = result = ValidateEmail(email.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-sex").textContent = result = ValidateSex(sex.value);
+    error = error || result !== "Looks good!";
+    document.getElementById("err-lang").textContent = result = ValidateLanguage(lang.value);
+    error = error || result !== "Looks good!";
+
+    if (!error)
+        alertAllFields(form);
 
     return false;
+}
+
+function alertAllFields(form)
+{
+    let allValues = "";
+    for (field of form)
+        allValues += field.value + "\n";
+    alert(allValues);
 }
 
 function ValidateUserID(value){
