@@ -40,6 +40,10 @@ document.onclick = function()
     ++numClicks;
 };
 
+document.forms["register-form"].onsubmit = function(event){
+    return ShowTrackingData(event);
+};
+
 // Key press: ncrement the field's counter by one
 function keyPressField(event)
 {
