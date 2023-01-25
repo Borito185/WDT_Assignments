@@ -35,6 +35,18 @@ function submitForm(event)
     document.getElementById("err-lang").textContent = result = ValidateLanguage(lang.value);
     error = error || result !== "Looks good!";
 
+    // Set colour
+    const fields = ["uid", "pwd", "name", "country", "zip", "email", "sex", "lang"];
+    for (let suffix of fields)
+    {
+        let f = document.getElementById("err-" + suffix);
+
+        if (f.textContent === "Looks good!")
+            f.classList.remove("error");
+        else
+            f.classList.add("error");
+    }
+
     if (!error)
         alertAllFields(form);
 

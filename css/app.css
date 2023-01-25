@@ -139,3 +139,6 @@
 .card-form > div > div > input {
   width: 60%;
 }
+.error{
+  color: red;
+}
