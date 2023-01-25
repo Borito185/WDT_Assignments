@@ -69,8 +69,6 @@ function ShowTrackingData(){
     // Make div visible
     div.classList.remove("hide");
 
-    alertAllValues();
-
     return false;
 }
 
