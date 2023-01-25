@@ -19,91 +19,106 @@ function submitForm(event)
 
     if (uid.value === "")
     {
-        document.getElementById("err-uid").textContent = "User ID is a required field.";
+        document.getElementById("err-uid").innerHTML = "User ID is a required field.";
+        document.getElementById("err-uid").classList.add("error");
         error = true;
     }
 
     if (pwd.value === "")
     {
-        document.getElementById("err-pwd").textContent = "Password is a required field.";
+        document.getElementById("err-pwd").innerHTML = "Password is a required field.";
+        document.getElementById("err-pwd").classList.add("error");
         error = true;
     }
 
     if (name.value === "")
     {
-        document.getElementById("err-name").textContent = "Name is a required field.";
+        document.getElementById("err-name").innerHTML = "Name is a required field.";
+        document.getElementById("err-name").classList.add("error");
         error = true;
     }
 
     if (country.value === "")
     {
-        document.getElementById("err-country").textContent = "Country is a required field.";
+        document.getElementById("err-country").innerHTML = "Country is a required field.";
+        document.getElementById("err-country").classList.add("error");
         error = true;
     }
     
     if (zip.value === "")
     {
-        document.getElementById("err-zip").textContent = "ZIP code is a required field.";
+        document.getElementById("err-zip").innerHTML = "ZIP code is a required field.";
+        document.getElementById("err-zip").classList.add("error");
         error = true;
     }
 
     if (email.value === "")
     {
-        document.getElementById("err-email").textContent = "Email is a required field.";
+        document.getElementById("err-email").innerHTML = "Email is a required field.";
+        document.getElementById("err-email").classList.add("error");
         error = true;
     }
 
     if (sex.value === "")
     {
-        document.getElementById("err-sex").textContent = "Sex is a required field.";
+        document.getElementById("err-sex").innerHTML = "Sex is a required field.";
+        document.getElementById("err-sex").classList.add("error");
         error = true;
     }
 
     if (lang.value === "")
     {
-        document.getElementById("err-lang").textContent = "Language is a required field.";
+        document.getElementById("err-lang").innerHTML = "Language is a required field.";
+        document.getElementById("err-lang").classList.add("error");
         error = true;
     }
 
     if (uid.value.length < 5 || uid.value.length > 12)
     {
-        document.getElementById("err-uid").textContent = "User ID must be between 5 and 12 characters long.";
+        document.getElementById("err-uid").innerHTML = "User ID must be between 5 and 12 characters long.";
+        document.getElementById("err-uid").classList.add("error");
         error = true;
     }
 
     if (!validUid(uid.value))
     {
-        document.getElementById("err-uid").textContent = "User ID must start with a capital letter, and end with a number or special character.";
+        document.getElementById("err-uid").innerHTML = "User ID must start with a capital letter, and end with a number or special character.";
+        document.getElementById("err-uid").classList.add("error");
         error = true;
     }
 
     if (pwd.value.length < 12)
     {
-        document.getElementById("err-pwd").textContent = "Password must have at least twelve characters.";
+        document.getElementById("err-pwd").innerHTML = "Password must have at least twelve characters.";
+        document.getElementById("err-pwd").classList.add("error");
         error = true;
     }
 
     if (!validPassword(pwd.value))
     {
-        document.getElementById("err-pwd").textContent = "Password must include upper and lowercase letters, digits and symbols.";
+        document.getElementById("err-pwd").innerHTML = "Password must include upper and lowercase letters, digits and symbols.";
+        document.getElementById("err-pwd").classList.add("error");
         error = true;
     }
 
     if (!isValidWord(name.value))
     {
-        document.getElementById("err-name").textContent = "Name must be alphabetical.";
+        document.getElementById("err-name").innerHTML = "Name must be alphabetical.";
+        document.getElementById("err-name").classList.add("error");
         error = true;
     }
 
     if (!validZip(zip.value))
     {
-        document.getElementById("err-zip").textContent = "ZIP code must have four digits followed by two letters.";
+        document.getElementById("err-zip").innerHTML = "ZIP code must have four digits followed by two letters.";
+        document.getElementById("err-zip").classList.add("error");
         error = true;
     }
 
     if (!validEmail(email.value))
     {
-        document.getElementById("err-pwd").textContent = "Enter a valid email address.";
+        document.getElementById("err-pwd").innerHTML = "Enter a valid email address.";
+        document.getElementById("err-pwd").classList.add("error");
         error = true;
     }
 
@@ -119,7 +134,11 @@ function resetErrorMsg()
     const suffixes = ["uid", "pwd", "name", "country", "zip", "email", "sex", "lang"];
 
     for (let field of suffixes)
-        document.getElementById("err-" + field).textContent = "";
+    {
+        const err = document.getElementById("err-" + field)
+        err.innerHTML = "Looks good!";
+        err.classList.remove("error");
+    }
 }
 
 function alertAllFields(form)
