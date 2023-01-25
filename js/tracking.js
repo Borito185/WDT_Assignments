@@ -52,7 +52,9 @@ function charTyped(event)
     numCharTyped.set(this, this.value.length);
 }
 
-function ShowTrackingData(){
+form.addEventListener("submit", (event) => 
+{
+
     //Adds the html with data to the div
     let div = document.getElementById("form-tracking-data");
 
@@ -69,10 +71,10 @@ function ShowTrackingData(){
     // Make div visible
     div.classList.remove("hide");
 
-    alertAllValues();
+    validateFields(event);
 
     return false;
-}
+});
 
 // Calculates the sum of all values of the map
 function GetSumOfValues(map){

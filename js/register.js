@@ -1,6 +1,6 @@
 const form = document.forms["register-form"];
 
-form.addEventListener("submit", (event) =>
+function validateFields(event)
 {
     resetErrorMsg();
 
@@ -112,7 +112,7 @@ form.addEventListener("submit", (event) =>
         alertAllFields(form);
     else
         event.preventDefault();
-});
+};
 
 function resetErrorMsg()
 {
