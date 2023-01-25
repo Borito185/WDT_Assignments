@@ -31,13 +31,16 @@ for (let f of fields)
     f.addEventListener("change", charTyped);
 }
 
-// Submit event for the form
-// document.forms["register-form"].addEventListener("submit", OnSubmit);
-
 // Click: increase click counter
 document.onclick = function()
 {
     ++numClicks;
+};
+
+// Submit event for the form
+document.forms["register-form"].onsubmit = function(event)
+{
+    return ShowTrackingData(event);
 };
 
 // Key press: ncrement the field's counter by one
@@ -52,7 +55,7 @@ function charTyped(event)
     numCharTyped.set(this, this.value.length);
 }
 
-function ShowTrackingData(){
+function ShowTrackingData(event){
     //Adds the html with data to the div
     let div = document.getElementById("form-tracking-data");
 
@@ -69,7 +72,7 @@ function ShowTrackingData(){
     // Make div visible
     div.classList.remove("hide");
 
-    submitForm();
+    submitForm(event);
 
     return false;
 }
