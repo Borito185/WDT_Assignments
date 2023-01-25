@@ -52,7 +52,7 @@ function charTyped(event)
     numCharTyped.set(this, this.value.length);
 }
 
-form.addEventListener("submit", (event) => 
+function ShowTrackingData(event)
 {
 
     //Adds the html with data to the div
@@ -74,7 +74,7 @@ form.addEventListener("submit", (event) =>
     validateFields(event);
 
     return false;
-});
+};
 
 // Calculates the sum of all values of the map
 function GetSumOfValues(map){
