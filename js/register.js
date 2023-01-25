@@ -1,4 +1,4 @@
-function alertAllValues()
+function submitForm()
 {
     const form = document.forms["register-form"];
     
