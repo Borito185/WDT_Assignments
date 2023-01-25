@@ -31,16 +31,15 @@ for (let f of fields)
     f.addEventListener("change", charTyped);
 }
 
-// Submit event for the form
-// document.forms["register-form"].addEventListener("submit", OnSubmit);
-
 // Click: increase click counter
 document.onclick = function()
 {
     ++numClicks;
 };
 
-document.forms["register-form"].onsubmit = function(event){
+// Submit event for the form
+document.forms["register-form"].onsubmit = function(event)
+{
     return ShowTrackingData(event);
 };
 
