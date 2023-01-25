@@ -40,6 +40,10 @@ document.onclick = function()
     ++numClicks;
 };
 
+document.forms["register-form"].onsubmit = function(event){
+    return ShowTrackingData(event);
+};
+
 // Key press: ncrement the field's counter by one
 function keyPressField(event)
 {
@@ -52,7 +56,8 @@ function charTyped(event)
     numCharTyped.set(this, this.value.length);
 }
 
-function ShowTrackingData(){
+function ShowTrackingData(event)
+{
     //Adds the html with data to the div
     let div = document.getElementById("form-tracking-data");
 
@@ -68,6 +73,8 @@ function ShowTrackingData(){
 
     // Make div visible
     div.classList.remove("hide");
+
+    submitForm(event);
 
     return false;
 }

@@ -1,6 +1,6 @@
 const form = document.forms["register-form"];
 
-form.addEventListener("submit", (event) =>
+function submitForm(event)
 {
     event.preventDefault(true);
 
@@ -24,10 +24,9 @@ form.addEventListener("submit", (event) =>
     document.getElementById("err-sex").textContent = ValidateSex(sex.value);
     document.getElementById("err-lang").textContent = ValidateLanguage(lang.value);
 
-    ShowTrackingData();
-
     return false;
-});
+}
+
 function ValidateUserID(value){
     if(/^\s*$/.test(value)){
         return "User ID is required."
